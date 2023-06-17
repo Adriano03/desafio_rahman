@@ -1,3 +1,5 @@
+import 'package:desafio_rahman/app/core/ui/theme/theme_config.dart';
+import 'package:desafio_rahman/app/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 class ChallengeApp extends StatelessWidget {
@@ -6,15 +8,11 @@ class ChallengeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(),
-      home: Scaffold(
-        body: Center(
-          child: OutlinedButton(
-            onPressed: () {},
-            child: const Text('Tap Me'),
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeConfig.theme,
+      routes: {
+        '/': (context) => const HomePage(),
+      },
     );
   }
 }
